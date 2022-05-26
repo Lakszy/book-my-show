@@ -9,7 +9,7 @@ function DefaultHOC(props) {
   const pathProp = props.path;
   return (
     <>
-      <DefaultLayout>
+      <DefaultLayout {...props}>
         <InnerComponent />
       </DefaultLayout>
     </>

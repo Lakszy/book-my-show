@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow } from "./EcardArrowCompo";
+import { NextArrow,PrevArrow } from "../Config/EcardArrowCompo";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

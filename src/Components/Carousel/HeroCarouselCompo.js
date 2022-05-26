@@ -27,6 +27,7 @@ function HeroCarousel() {
         fade: true,
         dots: true,
         centerPadding: '10px',
+        
     };
     const settingsMd = {
         centerPadding: '150px',
