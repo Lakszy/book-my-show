@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function CCcarousel(props) {
     const extraSetting = {
-        margin: "-3rems 1.55rem",
+        margin: "-3rem 1.55rem",
     }
     const settingsSm = {
         slidesToShow: 4,
