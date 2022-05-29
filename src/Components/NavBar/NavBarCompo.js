@@ -34,7 +34,7 @@ function NavMdLg() {
     return (
         <>
             <div className="flex  m-2 items-center gap-7 md:w-3/4 lg:w-1/2">
-                <div className="pl-2"> <img className="w-full h-12" src={logo}/></div>
+                <div className="pl-2"> <a href={`http://localhost:3000/`}><img className="w-full h-12" src={logo}/></a></div>
                 <form class="flex w-full">
                     <button class="w-14 h-12 bg-navBar-100 text-navBar-800 rounded-l-lg" type="submit">
                         <BiSearch className="w-full h-full p-2.5" />

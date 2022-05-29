@@ -1,14 +1,14 @@
 import React from "react";
 import { AiOutlinePicLeft } from "react-icons/ai";
 // AiOutlinePicLeft
-function AboutCompo() {
+function AboutCompo(props) {
     return (
         <>
             <div className="lg:w-4/5 lg:m-auto lg:my-10 flex flex-col gap-10 m-10 w-full">
                 <div className="lg:w-3/4 w-full flex flex-col gap-4">
                     <div className="text-3xl font-semibold">About the movie</div>
                     <div className="text-lg ">
-                        Doctor Strange in the Multiverse of Madness - a thrilling ride through the Multiverse with Doctor Strange, his trusted friend Wong and Wanda Maximoff, aka Scarlet Witch.
+                        {props.about}
                     </div>
                     <hr />
                 </div>

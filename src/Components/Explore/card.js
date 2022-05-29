@@ -1,21 +1,29 @@
-import React from "react"; 
-import {BiRupee} from "react-icons/bi";
+import React from "react";
+import { BiRupee } from "react-icons/bi";
 
 function Card(props) {
+    const lan = {
+        "hi": "Hindi",
+        "en": "English",
+        "ja": "Japanese",
+        "es": "Spanish"
+    }
     return (
         <>
             <div className="flex flex-col lg:w-1/4 w-1/3" >
                 <div className="px-4">
-                    <img className="rounded-lg" src={props.src} alt={props.title} />
+                    <a href={`http://localhost:3000/movies/${props.id}`}>
+                        <img className="rounded-lg" src={`https://image.tmdb.org/t/p/original${props.poster_path}`} alt={props.title} />
+                    </a>
                 </div>
                 <div className="font-semibold md:text-lg text-sm px-4 pt-4 leading-tight">
                     {props.title}
                 </div>
                 <div className="px-4 md:text-base text-xs text-gray-600">
-                    {props.lang}
+                    {lan[props.original_language]}
                 </div>
                 <div className="flex items-center px-4 md:text-base text-xs text-gray-600">
-                    <BiRupee/>{props.price}<div></div>
+                    <BiRupee />{Math.floor((Math.random() * 100) + 10) * 10}<div></div>
                 </div>
             </div>
         </>

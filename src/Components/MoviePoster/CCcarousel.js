@@ -6,11 +6,9 @@ import { NextArrow, PrevArrow } from "../Carousel/ArrowCompo";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
-function CCcarousel(props) {
+function CarouselCastCrew(props) {
     const extraSetting = {
-        margin: "-3rem 1.55rem",
+        margin: "-2rem 1.55rem",
     }
     const settingsSm = {
         slidesToShow: 4,
@@ -28,7 +26,6 @@ function CCcarousel(props) {
     }
     return (
         <>
-
             <div className="flex flex-col md:w-4/5 w-full m-auto my-10">
                 <div className="font-semibold text-3xl mx-10 md:mx-0">{props.title}</div>
                 <div className="md:hidden w-full mx-10">
@@ -36,9 +33,10 @@ function CCcarousel(props) {
                         {
                             props.arr.map((ig) => (
                                 <div className="flex flex-col text-center">
-                                    <img className="h-full w-full my-2 p-3 rounded-full" src={ig.src} alt="IMG.jpg" />
+                                    <img className="h-full w-full my-2 p-3 rounded-full" src={`https://image.tmdb.org/t/p/original${ig.profile_path}`} alt={ig.character} />
                                     <div className="font-medium">{ig.name} </div>
-                                    <div className=" text-gray-600">{ig.role} </div>
+                                    <div className={`text-gray-600 ${props.isCaste ? "" : "hidden"}`}>as {ig.character} </div>
+                                    <div className={`text-gray-600 ${props.isCaste ? "hidden" : ""}`}>{ig.job} </div>
                                 </div>
                             ))
                         }
@@ -56,9 +54,10 @@ function CCcarousel(props) {
                         {
                             props.arr.map((ig) => (
                                 <div className="flex flex-col text-center">
-                                    <img className="h-full w-full my-2 p-3 rounded-full" src={ig.src} alt="IMG.jpg" />
+                                    <img className="h-full w-full my-2 p-3 rounded-full" src={`https://image.tmdb.org/t/p/original${ig.profile_path}`} alt={ig.character} />
                                     <div className="font-medium">{ig.name} </div>
-                                    <div className=" text-gray-600">{ig.role} </div>
+                                    <div className={`text-gray-600 ${props.isCaste ? "" : "hidden"}`}>as {ig.character} </div>
+                                    <div className={`text-gray-600 ${props.isCaste ? "hidden" : ""}`}>{ig.job} </div>
                                 </div>
                             ))
                         }
@@ -74,5 +73,19 @@ function CCcarousel(props) {
             </div>
         </>
     );
+}
+
+function CCcarousel(props) {
+    if (props.arr.length == 0) {
+        return (<> </>);
+    }
+    console.log(props.arr.crew);
+    return (
+        <>
+            <CarouselCastCrew arr={props.arr.cast} title={"Cast"} isCaste={true} />
+            <CarouselCastCrew arr={props.arr.crew} title={"Crew"} />
+        </>
+    )
+
 }
 export default CCcarousel;

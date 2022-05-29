@@ -1,16 +1,35 @@
 import React from "react";
-// import Ecard from "../Components/Entertainment/EntertainmentCard";
-// import settingsCaruosel from "../Components/Config/settingCaruosel";
-// import tempPhoto from "../Components/Config/TempPhoto";
-// import PosterSlider from "../Components/Poster/PosterSlider";
 import HeroCarouselCo from "../Components/Carousel/HeroCarouselCompo";
-import cardPhoto from "../Components/Config/cardExpo";
 import CardExpo from "../Components/Explore/cardExpo";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+import { useParams } from "react-router-dom";
+
+
 function Explore() {
+    let params = useParams();
+    const [details, setDetails] = useState([]);
+    useEffect(() => {
+        const requestDetails = async () => {
+            const requestedDetails = await axios.get(`/movie/${params.topic}`);
+            setDetails(requestedDetails.data.results);
+        }
+        requestDetails();
+    }, []);
+
+    const title = {
+        "now_playing": "Now Playing",
+        "top_rated": "Top Rated",
+        "popular": "Popular",
+        "upcoming": "Upcoming",
+    };
+
     return (
         <>
-            <HeroCarouselCo/>
-            <CardExpo cardDetails={cardPhoto} title={"Movies In Delhi"}/>
+            <HeroCarouselCo />
+            <CardExpo cardDetails={details} title={title[params.topic]} />
         </>
     )
 };

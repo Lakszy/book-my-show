@@ -2,18 +2,17 @@ import React from "react";
 import Slider from "react-slick";
 
 import { NextArrow, PrevArrow } from "./ArrowCompo";
+
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function HeroCarousel() {
     const image = [
-        "https://assets-in.bmscdn.com/promotions/cms/creatives/1653051239112_rrr_.jpg",
-        "https://assets-in.bmscdn.com/promotions/cms/creatives/1651748319851_web.jpg",
-        "https://assets-in.bmscdn.com/promotions/cms/creatives/1652777889242_supermoon.jpg",
-        "https://assets-in.bmscdn.com/promotions/cms/creatives/1652866141572_sunburn.jpg",
-        "https://assets-in.bmscdn.com/promotions/cms/creatives/1643608159306_fb.jpg",
+        "https://assets-in.bmscdn.com/promotions/cms/creatives/1653635818524_superweb.jpg",
         "https://assets-in.bmscdn.com/promotions/cms/creatives/1651492562825_restaurant.jpg",
+        "https://assets-in.bmscdn.com/promotions/cms/creatives/1643608159306_fb.jpg",
     ];
     const settings = {
         arrow: true,
@@ -27,7 +26,7 @@ function HeroCarousel() {
         fade: true,
         dots: true,
         centerPadding: '10px',
-        
+
     };
     const settingsMd = {
         centerPadding: '150px',
@@ -61,6 +60,7 @@ function HeroCarousel() {
                             </div>
                         ))
                     }
+
                 </Slider>
             </div>
             <div className="hidden lg:block">

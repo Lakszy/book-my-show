@@ -1,10 +1,10 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import NavBarCompo from "../Components/NavBar/NavBarCompo";
 function DefaultLayout(props) {
     return (
         <>
-            <NavBarCompo {...props}/>
+            <NavBarCompo {...props} />
             {props.children}
         </>
     );

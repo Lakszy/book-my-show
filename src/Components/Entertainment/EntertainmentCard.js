@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { NextArrow,PrevArrow } from "../Config/EcardArrowCompo";
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,7 +45,7 @@ function Ecard() {
     return (
         <>
             <div className="md:hidden lg:hidden w-full">
-                <div className="mt-10 px-4 font-bold text-4xl">The Best Of Entertainment</div>
+                <div className="px-4 font-bold text-4xl">The Best Of Entertainment</div>
                 <Slider {...settingsSm}>
                     {
                         image.map((ig) => (
@@ -56,7 +57,7 @@ function Ecard() {
                 </Slider>
             </div>
             <div className="hidden md:block lg:hidden w-full">
-                <div className="mt-5 px-2 font-bold text-4xl">The Best Of Entertainment</div>
+                <div className="px-2 font-bold text-4xl">The Best Of Entertainment</div>
                 <Slider {...settingMdLg}>
                     {
                         image.map((ig) => (
@@ -68,7 +69,7 @@ function Ecard() {
                 </Slider>
             </div>
             <div className="hidden lg:block w-3/4 m-auto">
-                <div className="mt-10 px-4 font-bold text-4xl">The Best Of Entertainment</div>
+                <div className="px-4 font-bold text-4xl">The Best Of Entertainment</div>
                 <Slider {...settingMdLg}>
                     {
                         image.map((ig) => (

@@ -31,7 +31,7 @@ export function PrevArrow(props) {
             style={{
                 ...style,
                 backgroundColor: "black",
-                borderRadius: "5px 0px 0px 5px",
+                borderRadius: "0px 5px 5px 0px",
                 opacity: 0.6,
                 margin: "auto 1.55rem",
                 zIndex: 2,
