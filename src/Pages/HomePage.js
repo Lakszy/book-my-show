@@ -1,13 +1,19 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Ecard from "../Components/Entertainment/EntertainmentCard";
-import settingsCaruosel from "../Components/Config/settingCaruosel";
-import PosterSlider from "../Components/Poster/PosterSlider";
-import HeroCarouselCo from "../Components/Carousel/HeroCarouselCompo";
 import axios from "axios";
 
-function HomePage() {
 
+
+
+import settingsCaruosel from "../Components/Config/settingCaruosel";
+import Ecard from "../Components/Entertainment/EntertainmentCard";
+import PosterSlider from "../Components/Poster/PosterSlider";
+import HeroCarouselCo from "../Components/Carousel/HeroCarouselCompo";
+
+
+
+
+function HomePage() {
 
     const [top_rated, setTop_rated] = useState([]);
     useEffect(() => {
@@ -19,6 +25,7 @@ function HomePage() {
     }, []);
 
 
+
     const [popular, setPopular] = useState([]);
     useEffect(() => {
         const requestPopular = async () => {
@@ -27,6 +34,9 @@ function HomePage() {
         }
         requestPopular();
     }, []);
+
+
+
 
     const [now_playing, setNowPlaying] = useState([]);
     useEffect(() => {
@@ -38,6 +48,8 @@ function HomePage() {
     }, []);
 
 
+
+
     const [upcoming, setUpcoming] = useState([]);
     useEffect(() => {
         const requestUpcoming = async () => {
@@ -46,6 +58,9 @@ function HomePage() {
         }
         requestUpcoming();
     }, []);
+
+
+
 
 
     return (

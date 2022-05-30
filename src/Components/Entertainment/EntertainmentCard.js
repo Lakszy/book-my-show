@@ -1,12 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
-import { NextArrow,PrevArrow } from "../Config/EcardArrowCompo";
+
 
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+import { NextArrow,PrevArrow } from "../Config/EcardArrowCompo";
+
+
 function Ecard() {
+
+
     const image = [
         "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUwKyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/workshops-collection-202007231330.png",
 
@@ -32,16 +38,22 @@ function Ecard() {
 
         "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NiBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/adventure-collection-202010140844.png",
     ];
+
+
     const settingsSm = {
         slidesToShow: 3,
         slidesToScroll: 2,
     };
+
+
     const settingMdLg = {
         slidesToShow: 5,
         slidesToScroll: 2,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
     };
+
+
     return (
         <>
             <div className="md:hidden lg:hidden w-full">

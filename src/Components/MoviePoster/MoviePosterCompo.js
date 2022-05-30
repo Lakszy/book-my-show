@@ -2,12 +2,35 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { BiChevronRight, BiShareAlt } from "react-icons/bi";
 import { BsShare } from "react-icons/bs";
+
+
+
+function lanuchRazorPay() {
+    let options = {
+        key: "",
+        amount: 100,
+        currency: "INR",
+        name: "Book-My-Show-Clone",
+        description: "Movie Ticket Booking",
+        image: "in.bmscdn.com/webin/common/icons/logo.svg",
+        handler: () => { },
+        theme: { color: "#B91C1C" }
+    };
+    let rzp = new window.Razorpay(options);
+    rzp.open();
+}
+
+
+
 function MoviePoster(props) {
     if (props.Mdetails.length == 0) {
         return (<></>);
     }
+
     const screen = ["2D,", "3D", "SCREEN X,", "3D,", "IMAX 2D,", "4DX 3D,", "IMAX 3D,", "4DX"];
+
     const lang = ["English", "Hindi,", "Kannada,", "Malayalam,", "Tamil,", "Telugu"];
+
     return (
         <>
             <div >
@@ -57,7 +80,7 @@ function MoviePoster(props) {
                                     {parseInt(props.Mdetails.runtime / 60)}h {props.Mdetails.runtime % 60}m • {props.Mdetails.genres.map((ind) => (ind.name + " "))} • UA • {props.Mdetails.release_date}
                                 </div>
                                 <div className="flex gap-6">
-                                    <button className="bg-red-700 text-xl font-semibold px-8 py-3 rounded-lg">Book tickets</button>
+                                    <button className="bg-red-700 text-xl font-semibold md:px-8 md:py-3 px-4 py-1 rounded-lg" onClick={lanuchRazorPay} >Book tickets</button>
                                     <button className="flex items-center text-lg gap-3W px-3.5 py-2 rounded-md md:hidden" style={{ backgroundColor: "rgba(34, 34, 34, 0.8)" }}><BsShare className="text-3xl" /><div className="font-semibold">Share</div></button>
                                 </div>
                             </div>

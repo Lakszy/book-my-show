@@ -1,11 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
+
+
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// MdPlayArrow
+
+
+
 import { MdPlayArrow } from "react-icons/md";
 import Poster from "./Poster";
+
+
 
 function PosterSlider(props) {
     return (
@@ -23,7 +29,7 @@ function PosterSlider(props) {
                             {props.posterSubTitle}
                         </div>
                     </div>
-                    <a href={`http://localhost:3000/explore/${props.pth}`}  className={`flex items-center text-sm hover:underline ${props.isDark ? "text-white" : "text-red-700"}`}>See all <MdPlayArrow /></a>
+                    <a href={`http://localhost:3000/explore/${props.pth}`} className={`flex items-center text-sm hover:underline ${props.isDark ? "text-white" : "text-red-700"}`}>See all <MdPlayArrow /></a>
                 </div>
                 <div>
                     <div className="hidden md:hidden lg:block lg:m-auto lg:w-5/6 ">

@@ -1,14 +1,18 @@
 import React from "react";
-import HeroCarouselCo from "../Components/Carousel/HeroCarouselCompo";
-import CardExpo from "../Components/Explore/cardExpo";
-
 import { useEffect, useState } from "react";
-import axios from "axios";
-
 import { useParams } from "react-router-dom";
 
 
+import axios from "axios";
+
+
+import HeroCarouselCo from "../Components/Carousel/HeroCarouselCompo";
+import CardExpo from "../Components/Explore/cardExpo";
+
+
 function Explore() {
+
+
     let params = useParams();
     const [details, setDetails] = useState([]);
     useEffect(() => {
@@ -19,12 +23,14 @@ function Explore() {
         requestDetails();
     }, []);
 
+
     const title = {
         "now_playing": "Now Playing",
         "top_rated": "Top Rated",
         "popular": "Popular",
         "upcoming": "Upcoming",
     };
+
 
     return (
         <>

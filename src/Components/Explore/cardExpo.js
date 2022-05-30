@@ -1,9 +1,13 @@
 import React from "react";
 
+
 import Filter from "./filter";
 import CardSlide from "./cardSlider";
 
+
 function CardExpo(props) {
+
+
     const filter = [
         {
             title: "Languages",
@@ -19,6 +23,8 @@ function CardExpo(props) {
             array: ["2D", "3D", "4DX", "4DX 3D", "7D", "MX4D 3D", "3D SCREEN X", "IMAX 2D", "IMAX 3D"]
         }
     ];
+
+
     return (
         <>
             <div className="py-10 m-auto">

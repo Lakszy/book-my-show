@@ -1,4 +1,6 @@
 import React from "react";
+
+
 export function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -22,6 +24,8 @@ export function NextArrow(props) {
         />
     );
 };
+
+
 
 export function PrevArrow(props) {
     const { className, style, onClick } = props;

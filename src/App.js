@@ -16,7 +16,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<DefaultHOC element={HomePage} />} />
-        <Route path="/movies/:id" element={<DefaultHOC element={MoviePage} isMovie={true} />} />
+        <Route path="/movie/:id" element={<DefaultHOC element={MoviePage} isMovie={true} />} />
         <Route path="/explore/:topic" element={<DefaultHOC element={Explore} isExpo={true} />} />
       </Routes>
     </>

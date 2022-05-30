@@ -1,6 +1,11 @@
 import React from "react";
+
+
+
 import { AiOutlinePicLeft } from "react-icons/ai";
-// AiOutlinePicLeft
+
+
+
 function AboutCompo(props) {
     return (
         <>

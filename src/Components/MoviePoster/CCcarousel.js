@@ -1,29 +1,38 @@
 import React from "react";
 import Slider from "react-slick";
-import { NextArrow, PrevArrow } from "../Carousel/ArrowCompo";
-// import { NextArrow, PrevArrow } from "../Config/EcardArrowCompo";
-// Import css files
+
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+import { NextArrow, PrevArrow } from "../Carousel/ArrowCompo";
+
+
 function CarouselCastCrew(props) {
+
     const extraSetting = {
         margin: "-2rem 1.55rem",
     }
+
     const settingsSm = {
         slidesToShow: 4,
         slidesToScroll: 2,
     };
+
     const settingMdLg = {
         slidesToShow: 5,
         slidesToScroll: 2,
         nextArrow: <NextArrow extra={extraSetting} />,
         prevArrow: <PrevArrow extra={extraSetting} />
     };
+
     const extra = [];
     for (let int = 0; int < 5 - props.arr.length; int++) {
         extra.push(1);
     }
+
+
     return (
         <>
             <div className="flex flex-col md:w-4/5 w-full m-auto my-10">
@@ -75,11 +84,11 @@ function CarouselCastCrew(props) {
     );
 }
 
+
 function CCcarousel(props) {
     if (props.arr.length == 0) {
         return (<> </>);
     }
-    console.log(props.arr.crew);
     return (
         <>
             <CarouselCastCrew arr={props.arr.cast} title={"Cast"} isCaste={true} />
