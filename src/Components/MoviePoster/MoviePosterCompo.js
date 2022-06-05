@@ -1,13 +1,13 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
-import { BiChevronRight, BiShareAlt } from "react-icons/bi";
+import { BiChevronRight } from "react-icons/bi";
 import { BsShare } from "react-icons/bs";
 
 
 
 function lanuchRazorPay() {
     let options = {
-        key: "",
+        key: process.env.REACT_APP_RAZORPAY_KEY,
         amount: 100,
         currency: "INR",
         name: "Book-My-Show-Clone",
@@ -26,7 +26,7 @@ function MoviePoster(props) {
     if (props.Mdetails.length == 0) {
         return (<></>);
     }
-
+    
     const screen = ["2D,", "3D", "SCREEN X,", "3D,", "IMAX 2D,", "4DX 3D,", "IMAX 3D,", "4DX"];
 
     const lang = ["English", "Hindi,", "Kannada,", "Malayalam,", "Tamil,", "Telugu"];
@@ -41,7 +41,7 @@ function MoviePoster(props) {
                 </div>
                 <div className="w-full relative flex items-center" style={{ height: "32rem", backgroundImage: "linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%)", fontFamily: "Sans-serif" }}>
                     <div className="flex w-full lg:w-3/4 m-auto">
-                        <div className="w-96 ">
+                        <div className="w-80 ">
                             <div className="p-4 w-full flex flex-col items-center">
                                 <img className="w-full rounded-t-2xl shadow-2xl cursor-pointer"
                                     src={`https://image.tmdb.org/t/p/original${props.Mdetails.poster_path}`}
@@ -49,7 +49,7 @@ function MoviePoster(props) {
                                 <div className=" w-full text-center text-white text-sm bg-black rounded-b-2xl py-1">In cinemas</div>
                             </div>
                         </div>
-                        <div className="flex w-full text-white justify-between ">
+                        <div className="flex w-2/3 text-white justify-between ">
                             <div className="flex flex-col w-full md:w-3/5 justify-evenly">
                                 <div className="lg:text-4xl font-bold text-3xl " >{props.Mdetails.title}</div>
                                 <div className="flex items-center gap-3">

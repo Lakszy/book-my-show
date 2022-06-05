@@ -46,7 +46,13 @@ function Ecard() {
     };
 
 
-    const settingMdLg = {
+    const settingMd = {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
+    };
+    const settingLg = {
         slidesToShow: 5,
         slidesToScroll: 2,
         nextArrow: <NextArrow />,
@@ -68,9 +74,9 @@ function Ecard() {
                     }
                 </Slider>
             </div>
-            <div className="hidden md:block lg:hidden w-full">
+            <div className="hidden md:block lg:hidden w-4/5 m-auto">
                 <div className="px-2 font-bold text-4xl">The Best Of Entertainment</div>
-                <Slider {...settingMdLg}>
+                <Slider {...settingMd}>
                     {
                         image.map((ig) => (
                             <div>
@@ -82,7 +88,7 @@ function Ecard() {
             </div>
             <div className="hidden lg:block w-3/4 m-auto">
                 <div className="px-4 font-bold text-4xl">The Best Of Entertainment</div>
-                <Slider {...settingMdLg}>
+                <Slider {...settingLg}>
                     {
                         image.map((ig) => (
                             <div className="">

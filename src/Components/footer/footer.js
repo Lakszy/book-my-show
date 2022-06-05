@@ -10,7 +10,13 @@ import { AiFillInstagram } from "react-icons/ai";
 
 
 function Footer() {
-    const help = ["About Us", "Contact Us", "FAQs", "Terms and Conditions", "Privacy Policy"];
+    const help = [
+        { e: "About Us", link_: "https://in.bookmyshow.com/aboutus" },
+        { e: "Contact Us", link_: "https://in.bookmyshow.com/contactus" },
+        { e: "FAQs", link_: "https://support.bookmyshow.com/support/solutions" },
+        { e: "Terms and Conditions", link_: "https://in.bookmyshow.com/terms-and-conditions" },
+        { e: "Privacy Policy", link_: "https://in.bookmyshow.com/privacy" },
+    ];
     return (<>
         <footer class="flex flex-col items-center gap-8 bg-footer-1 text-footer-4 py-8">
             <div className="flex flex-col items-center w-full bg-footer-2">
@@ -24,7 +30,7 @@ function Footer() {
                         help.map((ele) => (
                             <>
                                 &nbsp;|&nbsp;
-                                <div className="hover:underline hover:text-white cursor-pointer transition-all duration-300">{ele}</div>
+                                <a className="hover:underline hover:text-white cursor-pointer transition-all duration-300" href={ele.link_} target="_blank">{ele.e}</a>
                                 &nbsp;|&nbsp;
                             </>
                         ))
@@ -35,12 +41,13 @@ function Footer() {
                 <a href="http://localhost:3000/"><img alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img></a>
             </div>
             <div className="flex gap-4 text-3xl ">
-                <ImFacebook className="hover:text-white cursor-pointer transition-all duration-300" />
-                <ImTwitter className="hover:text-white cursor-pointer transition-all duration-300" />
-                <AiFillInstagram className="hover:text-white cursor-pointer transition-all duration-300" />
-                <ImYoutube className="hover:text-white cursor-pointer transition-all duration-300" />
-                <ImLinkedin className="hover:text-white cursor-pointer transition-all duration-300" />
-                <ImPinterest className="hover:text-white cursor-pointer transition-all duration-300" />
+                <a target="_blank" href="https://www.linkedin.com/in/arjun-verma-45059a215/"><ImLinkedin className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://www.facebook.com/BookMyShowIN"><ImFacebook className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://twitter.com/BookMyShow/"><ImTwitter className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://www.instagram.com/bookmyshowin/"><AiFillInstagram className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://www.youtube.com/user/BookMyShow/featured"><ImYoutube className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://www.pinterest.com/bookmyshow/"><ImPinterest className="hover:text-white cursor-pointer transition-all duration-300" /></a>
+                <a target="_blank" href="https://www.linkedin.com/in/arjun-verma-45059a215/"><ImLinkedin className="hover:text-white cursor-pointer transition-all duration-300" /></a>
             </div>
             <div className="text-center text-sm">
                 Copyright 2022 © Bigtree Entertainment Pvt. Ltd. All Rights Reserved.

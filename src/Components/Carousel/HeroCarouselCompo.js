@@ -14,9 +14,11 @@ import { NextArrow, PrevArrow } from "./ArrowCompo";
 function HeroCarousel() {
 
     const image = [
+        "https://assets-in.bmscdn.com/promotions/cms/creatives/1654067732011_fnb_web.jpg",
         "https://assets-in.bmscdn.com/promotions/cms/creatives/1653635818524_superweb.jpg",
         "https://assets-in.bmscdn.com/promotions/cms/creatives/1651492562825_restaurant.jpg",
         "https://assets-in.bmscdn.com/promotions/cms/creatives/1643608159306_fb.jpg",
+        "https://assets-in.bmscdn.com/promotions/cms/creatives/1654251422405_compartmentno6_web.jpg"
     ];
 
 
