@@ -6,6 +6,7 @@ import careLogo from "../footer/customerCareLogo.png";
 
 import { ImFacebook, ImYoutube, ImLinkedin, ImPinterest, ImTwitter } from "react-icons/im";
 import { AiFillInstagram } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 
 
@@ -38,7 +39,9 @@ function Footer() {
                 </div>
             </div>
             <div>
-                <a href="http://localhost:3000/"><img alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img></a>
+                <Link to="/">
+                <img alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img>
+                </Link>
             </div>
             <div className="flex gap-4 text-3xl ">
                 <a target="_blank" href="https://www.linkedin.com/in/arjun-verma-45059a215/"><ImLinkedin className="hover:text-white cursor-pointer transition-all duration-300" /></a>

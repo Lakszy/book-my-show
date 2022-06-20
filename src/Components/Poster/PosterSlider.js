@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 
@@ -20,7 +21,7 @@ function PosterSlider(props) {
                 <div className={`${props.isDark ? "" : "hidden"}`}>
                     <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-rupay-banner-web-collection-202104230555.png" className="m-auto w-full md:w-4/5 lg:w-5/6 px-4" />
                 </div>
-                <div className="flex m-auto w-4/5 lg:w-5/6 p-4 justify-between">
+                <div className="flex m-auto w-4/5 lg:w-5/6 p-4 justify-between items-center">
                     <div>
                         <div className="text-2xl font-bold">
                             {props.posterTitle}
@@ -29,7 +30,12 @@ function PosterSlider(props) {
                             {props.posterSubTitle}
                         </div>
                     </div>
-                    <a href={`http://localhost:3000/explore/${props.pth}`} className={`flex items-center text-sm hover:underline ${props.isDark ? "text-white" : "text-red-700"}`}>See all <MdPlayArrow /></a>
+                    <Link to={`/explore/${props.pth}`}>
+
+                        <div className={`flex items-center text-sm hover:underline ${props.isDark ? "text-white" : "text-red-700"}`}>
+                            See all <MdPlayArrow />
+                        </div>
+                    </Link>
                 </div>
                 <div>
                     <div className="hidden md:hidden lg:block lg:m-auto lg:w-5/6 ">

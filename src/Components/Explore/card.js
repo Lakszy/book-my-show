@@ -2,6 +2,7 @@ import React from "react";
 
 
 import { BiRupee } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 function Card(props) {
@@ -19,9 +20,9 @@ function Card(props) {
         <>
             <div className="flex flex-col lg:w-1/4 w-1/3" >
                 <div className="px-4">
-                    <a href={`http://localhost:3000/movie/${props.id}`}>
+                    <Link to={`/movie/${props.id}`}>
                         <img className="rounded-lg shadow-2xl" src={`https://image.tmdb.org/t/p/original${props.poster_path}`} alt={props.title} />
-                    </a>
+                    </Link>
                 </div>
                 <div className="font-semibold md:text-lg text-sm px-4 pt-4 leading-tight">
                     {props.title}

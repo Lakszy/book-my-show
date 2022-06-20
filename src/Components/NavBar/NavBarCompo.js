@@ -6,6 +6,7 @@ import { BiChevronRight, BiSearch } from "react-icons/bi";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { CgMenu } from "react-icons/cg";
 import { VscChevronLeft } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 
 
@@ -43,7 +44,12 @@ function NavMdLg() {
     return (
         <>
             <div className="flex  m-2 items-center gap-7 md:w-3/4 lg:w-1/2">
-                <div className="pl-2"> <a href={`http://localhost:3000/`}><img className="w-full h-11" alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img></a></div>
+                <div className="pl-2">
+                    <Link to="/">
+                        <img className="w-full h-11" alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg">
+                        </img>
+                    </Link>
+                </div>
                 <form className="flex w-full">
                     <button className="w-14 h-12 bg-navBar-100 text-navBar-800 rounded-l-lg" type="submit">
                         <BiSearch className="w-full h-full p-2.5" />
