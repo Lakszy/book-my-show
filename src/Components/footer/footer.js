@@ -21,18 +21,20 @@ function Footer() {
     return (<>
         <footer class="flex flex-col items-center gap-8 bg-footer-1 text-footer-4 py-8">
             <div className="flex flex-col items-center w-full bg-footer-2">
-                <img className="w-20" src={careLogo} />
+                <img className="w-20" src={careLogo} alt={"LOGO"}/>
                 <div className="text-footer-3 cursor-default">24/7 Customer Care </div>
             </div>
             <div className="flex flex-col items-center w-full " >
                 <div className="font-semibold text-footer-3 text-xl">Help</div>
-                <div className="flex flex-wrap cursor-default">
+                <div className="flex flex-wrap cursor-default items-center justify-center">
                     {
                         help.map((ele) => (
                             <>
-                                &nbsp;|&nbsp;
-                                <a className="hover:underline hover:text-white cursor-pointer transition-all duration-300" href={ele.link_} target="_blank">{ele.e}</a>
-                                &nbsp;|&nbsp;
+                                <div>
+                                    &nbsp;|&nbsp;
+                                    <a className="hover:underline hover:text-white cursor-pointer transition-all duration-300" href={ele.link_} target="_blank">{ele.e}</a>
+                                    &nbsp;|&nbsp;
+                                </div>
                             </>
                         ))
                     }
@@ -40,7 +42,7 @@ function Footer() {
             </div>
             <div>
                 <Link to="/">
-                <img alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img>
+                    <img alt="bookmyshow" src="//in.bmscdn.com/webin/common/icons/logo.svg"></img>
                 </Link>
             </div>
             <div className="flex gap-4 text-3xl ">

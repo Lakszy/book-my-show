@@ -17,21 +17,20 @@ import Poster from "./Poster";
 function PosterSlider(props) {
     return (
         <>
-            <div className={`flex flex-col pb-8 ${props.isDark ? "text-white" : ""}`} style={{ backgroundColor: props.bgColor }}>
+            <div className={`flex flex-col  ${props.isDark ? "text-white py-6" : ""}`} style={{ backgroundColor: props.bgColor }}>
                 <div className={`${props.isDark ? "" : "hidden"}`}>
                     <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/premiere-rupay-banner-web-collection-202104230555.png" className="m-auto w-full md:w-4/5 lg:w-5/6 px-4" />
                 </div>
-                <div className="flex m-auto w-4/5 lg:w-5/6 p-4 justify-between items-center">
+                <div className="flex m-auto w-full  md:w-4/5 lg:w-5/6 p-4 justify-between items-center">
                     <div>
-                        <div className="text-2xl font-bold">
+                        <div className="md:text-2xl font-bold text-xl">
                             {props.posterTitle}
                         </div >
-                        <div className={`font-medium tracking-tight ,${props.isSubTitle ? "" : "hidden"} `}>
+                        <div className={`font-medium tracking-tight md:text-base text-xs ,${props.isSubTitle ? "" : "hidden"} `}>
                             {props.posterSubTitle}
                         </div>
                     </div>
                     <Link to={`/explore/${props.pth}`}>
-
                         <div className={`flex items-center text-sm hover:underline ${props.isDark ? "text-white" : "text-red-700"}`}>
                             See all <MdPlayArrow />
                         </div>
@@ -52,7 +51,7 @@ function PosterSlider(props) {
                             }
                         </Slider >
                     </div>
-                    <div className="md:hidden lg:hidden w-4/5 m-auto ">
+                    <div className="md:hidden lg:hidden w-[90%] m-auto ">
                         <Slider {...props.settingCaruosel.settingsCaruoselSm} >
                             {
                                 props.posters.map((popo) => (<Poster {...popo} />))

@@ -20,8 +20,8 @@ function NavSm(props) {
                     </span>
                 </div>
                 <div className="flex">
-                    <button className="mx-2 px-3 py-1 bg-navBar-100 text-navBar-800 font-bold rounded">USE APP</button>
-                    <div className="w-8 h-8">
+                    <button className="mx-2 px-3 py-1 bg-navBar-100 text-navBar-800 font-bold rounded md:text-base text-xs">USE APP</button>
+                    <div className="md:w-8 md:h-8 w-6 h-6">
                         <BiSearch className="w-full h-full" />
                     </div>
                 </div>

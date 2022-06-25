@@ -39,15 +39,14 @@ function PrevArrowP(props) {
     );
 };
 
-const settingsAll= {
-    slidesToScroll: 3,
+const settingsAll = {
     nextArrow: <NextArrowP />,
     prevArrow: <PrevArrowP />
 };
 const settingCaruosel =
 {
-    settingsCaruoselLg: { slidesToShow: 5, ...settingsAll },
-    settingsCaruoselMd: { slidesToShow: 4, ...settingsAll  },
-    settingsCaruoselSm: { slidesToShow: 3, ...settingsAll  },
+    settingsCaruoselLg: { slidesToShow: 5,slidesToScroll: 2, ...settingsAll },
+    settingsCaruoselMd: { slidesToShow: 3,slidesToScroll: 1, ...settingsAll },
+    settingsCaruoselSm: { slidesToShow: 2,slidesToScroll: 1, ...settingsAll },
 };
 export default settingCaruosel;

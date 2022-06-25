@@ -7,7 +7,7 @@ import Card from "./card";
 function CardSlide(props) {
     return (
         <>
-            <div className="flex flex-col lg:w-2/3 md:w-4/5 gap-8 lg:px-10 md:px-4">
+            <div className="flex flex-col lg:w-2/3 md:w-[70%] gap-8 lg:px-10 md:px-4">
                 <div className="text-3xl font-semibold">
                     {props.title}
                 </div>
@@ -18,7 +18,7 @@ function CardSlide(props) {
                         ))
                     }
                 </div>
-                <div className="flex flex-wrap gap-y-10">
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
                     {
                         props.cardDetails.map((card) => (
                             <Card {...card} className="" />

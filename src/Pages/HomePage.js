@@ -65,8 +65,8 @@ function HomePage() {
 
     return (
         <>
-            <HeroCarouselCo />
             <div className="flex flex-col gap-10">
+            <HeroCarouselCo />
                 <PosterSlider settingCaruosel={settingsCaruosel} posters={top_rated} posterTitle={"Top Rated"} pth={"top_rated"} />
                 <div className="lg:w-5/6 m-auto"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120:q-80/lead-in-v3-collection-202102040828.png" alt="xyz" /></div>
                 <Ecard />

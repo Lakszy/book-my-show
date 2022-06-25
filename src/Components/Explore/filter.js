@@ -8,7 +8,7 @@ import { BsChevronDown } from "react-icons/bs";
 function Filter(props) {
     return (
         <>
-            <div className="flex flex-col md:w-1/5 w-full gap-10">
+            <div className="flex flex-col lg:w-[25%] md:w-[30%]  w-full gap-10">
                 <div className="text-3xl font-semibold">Filters</div>
                 <div className="flex flex-col gap-4 ">
                     {

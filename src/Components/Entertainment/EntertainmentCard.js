@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import { NextArrow,PrevArrow } from "../Config/EcardArrowCompo";
+import { NextArrow, PrevArrow } from "../Config/EcardArrowCompo";
 
 
 function Ecard() {
@@ -63,12 +63,12 @@ function Ecard() {
     return (
         <>
             <div className="md:hidden lg:hidden w-full">
-                <div className="px-4 font-bold text-4xl">The Best Of Entertainment</div>
+                <div className="px-4 font-bold md:text-4xl text-2xl">The Best Of Entertainment</div>
                 <Slider {...settingsSm}>
                     {
                         image.map((ig) => (
                             <div>
-                                <img className="h-full w-full my-1 p-3 rounded-lg" src={ig} alt="IMG.jpg" />
+                                <img className="h-full w-full my-2 px-1 rounded-lg" src={ig} alt="IMG.jpg" />
                             </div>
                         ))
                     }

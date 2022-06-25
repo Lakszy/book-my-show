@@ -16,8 +16,9 @@ function CarouselCastCrew(props) {
     }
 
     const settingsSm = {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 2,
+        arrows:false
     };
 
     const settingMdLg = {
@@ -35,13 +36,13 @@ function CarouselCastCrew(props) {
 
     return (
         <>
-            <div className="flex flex-col md:w-4/5 w-full m-auto my-10">
-                <div className="font-semibold text-3xl mx-10 md:mx-0">{props.title}</div>
-                <div className="md:hidden w-full mx-10">
+            <div className="flex flex-col md:w-4/5 w-full m-auto my-10 px-6">
+                <div className="font-semibold text-3xl md:mx-0">{props.title}</div>
+                <div className="md:hidden w-full">
                     <Slider {...settingsSm}>
                         {
                             props.arr.map((ig) => (
-                                <div className="flex flex-col text-center">
+                                <div className="flex flex-col text-center text-xs">
                                     <img className="h-full w-full my-2 p-3 rounded-full" src={`https://image.tmdb.org/t/p/original${ig.profile_path}`} alt={ig.character} />
                                     <div className="font-medium">{ig.name} </div>
                                     <div className={`text-gray-600 ${props.isCaste ? "" : "hidden"}`}>as {ig.character} </div>
@@ -86,7 +87,7 @@ function CarouselCastCrew(props) {
 
 
 function CCcarousel(props) {
-    if (props.arr.length == 0) {
+    if (props.arr.length === 0) {
         return (<> </>);
     }
     return (

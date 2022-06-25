@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "./ArrowCompo";
 
 
-
 function HeroCarousel() {
 
     const image = [
@@ -34,9 +33,9 @@ function HeroCarousel() {
 
     const settingsSm = {
         fade: true,
-        dots: true,
-        centerPadding: '10px',
-
+        centerPadding: '0px',
+        arrows: false,
+        autoplay:false
     };
 
 
@@ -56,39 +55,41 @@ function HeroCarousel() {
 
     return (
         <>
-            <div className="md:hidden lg:hidden">
-                <Slider {...settingsSm} {...settings}>
-                    {
-                        image.map((ig) => (
-                            <div className="h-80">
-                                <img className="h-full w-full m-1 p-1 rounded-lg" src={ig} alt="IMG" />
-                            </div>
-                        ))
-                    }
-                </Slider>
-            </div>
-            <div className="hidden md:block lg:hidden">
-                <Slider {...settingsMd} {...settings}>
-                    {
-                        image.map((ig) => (
-                            <div className="h-80">
-                                <img className="h-full w-full m-1 p-1 rounded-lg" src={ig} alt="IMG" />
-                            </div>
-                        ))
-                    }
+            <div>
+                <div className="md:hidden">
+                    <Slider {...settings} {...settingsSm}>
+                        {
+                            image.map((ig) => (
+                                <div className="h-40">
+                                    <img className="h-full w-full p-2 rounded-lg" src={ig} alt="IMG" />
+                                </div>
+                            ))
+                        }
+                    </Slider>
+                </div>
+                <div className="hidden md:block lg:hidden">
+                    <Slider {...settingsMd} {...settings}>
+                        {
+                            image.map((ig) => (
+                                <div className="h-60">
+                                    <img className="h-full w-full p-2 rounded-lg" src={ig} alt="IMG" />
+                                </div>
+                            ))
+                        }
 
-                </Slider>
-            </div>
-            <div className="hidden lg:block">
-                <Slider {...settingsLg} {...settings}>
-                    {
-                        image.map((ig) => (
-                            <div className="h-96">
-                                <img className="h-full w-full m-2 p-2 rounded-xl" src={ig} alt="IMG" />
-                            </div>
-                        ))
-                    }
-                </Slider>
+                    </Slider>
+                </div>
+                <div className="hidden lg:block">
+                    <Slider {...settingsLg} {...settings}>
+                        {
+                            image.map((ig) => (
+                                <div className="h-80">
+                                    <img className="h-full w-full p-4 rounded-xl" src={ig} alt="IMG" />
+                                </div>
+                            ))
+                        }
+                    </Slider>
+                </div>
             </div>
         </>
     );
