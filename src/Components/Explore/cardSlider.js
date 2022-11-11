@@ -18,10 +18,12 @@ function CardSlide(props) {
                         ))
                     }
                 </div>
-                <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4 gap-y-10">
                     {
                         props.cardDetails.map((card) => (
-                            <Card {...card} className="" />
+                            <div className="rounded-lg hover:shadow-xl hover:shadow-slate-600 hover:scale-105 transition-all duration-250">
+                                <Card {...card}  />
+                            </div>
                         ))
                     }
                 </div>

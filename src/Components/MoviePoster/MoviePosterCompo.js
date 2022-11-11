@@ -1,9 +1,12 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { BiChevronRight } from "react-icons/bi";
-import { BsShare } from "react-icons/bs";
+import { BsShare, BsWhatsapp } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
 
-
+import {
+    WhatsappShareButton,
+} from "react-share";
 
 function lanuchRazorPay() {
     let options = {
@@ -51,9 +54,9 @@ function MoviePoster(props) {
                                 <div className="font-bold text-2xl text-white" >{props.Mdetails.title}</div>
                                 <div className="flex items-center md:gap-3 gap-2 text-white">
                                     <FaHeart className="md:text-3xl text-xl text-red-700" />
-                                    <div className="md:text-3xl text-base  font-bold">{props.Mdetails.vote_average * 10}%</div>
-                                    <div className="inline-flex items-center md:text-base text-xs">{props.Mdetails.vote_count / 1000}K ratings</div>
+                                    <div className="md:text-3xl text-base  font-bold">{(props.Mdetails.vote_average * 10).toPrecision(4)}%</div>
                                 </div>
+                                <div className="text-white inline-flex items-center md:text-base text-xs">{(props.Mdetails.vote_count / 1000).toPrecision(4)}K ratings<BiChevronRight /></div>
                             </div>
                         </div>
                         <div className="flex md:w-2/3 w-full text-white justify-between ">
@@ -61,8 +64,8 @@ function MoviePoster(props) {
                                 <div className="lg:text-4xl font-bold md:text-2xl text-2xl md:block hidden" >{props.Mdetails.title}</div>
                                 <div className="md:flex items-center md:gap-3 gap-2 hidden">
                                     <FaHeart className="md:text-3xl text-xl text-red-700" />
-                                    <div className="md:text-3xl text-base  font-bold">{props.Mdetails.vote_average * 10}%</div>
-                                    <div className="flex items-center md:text-base text-xs">{props.Mdetails.vote_count / 1000}K ratings<BiChevronRight /></div>
+                                    <div className="md:text-3xl text-base  font-bold">{(props.Mdetails.vote_average * 10).toPrecision(4)}%</div>
+                                    <div className="flex items-center md:text-base text-xs">{(props.Mdetails.vote_count / 1000).toPrecision(4)}K ratings<BiChevronRight /></div>
                                 </div>
                                 <div className="hidden md:flex justify-between items-center text-lg px-5 py-2 rounded-lg" style={{ backgroundColor: "#333333" }}>
                                     <div className="">
@@ -88,11 +91,15 @@ function MoviePoster(props) {
                                 </div>
                                 <div className="flex gap-6">
                                     <button className="bg-red-700 md:text-xl text-sm font-semibold md:px-8 md:py-3 px-3 py-1 md:rounded-lg rounded" onClick={lanuchRazorPay} >Book tickets</button>
-                                    <button className="flex items-center md:text-lg text-xs gap-3W px-3.5 py-2 rounded-md md:hidden gap-2" style={{ backgroundColor: "rgba(34, 34, 34, 0.8)" }}><BsShare className="md:text-2xl text-sm" /><div className="font-semibold">Share</div></button>
+                                    <WhatsappShareButton url={window.location.href} title={props.Mdetails.title}>
+                                        <button className="flex items-center md:text-lg text-xs gap-3W px-3.5 py-2 rounded-md md:hidden gap-1" style={{ backgroundColor: "rgba(34, 34, 34, 0.8)" }}><BsWhatsapp className="md:text-2xl text-sm" /><div className="font-semibold">Share</div></button>
+                                    </WhatsappShareButton>
                                 </div>
                             </div>
                             <div>
-                                <button className="md:flex items-center text-lg gap-3 px-3.5 py-2 rounded-md hidden" style={{ backgroundColor: "rgba(34, 34, 34, 0.8)" }}><BsShare className="text-3xl font-bold" /><div className="font-semibold">Share</div></button>
+                                <WhatsappShareButton url={window.location.href} title={props.Mdetails.title}>
+                                    <button className="md:flex items-center text-base gap-3 px-3.5 py-2 rounded-md hidden" style={{ backgroundColor: "rgba(34, 34, 34, 0.8)" }}><BsWhatsapp className="text-xl font-bold" /><div className="font-semibold">Share</div></button>
+                                </WhatsappShareButton>
                             </div>
                         </div>
                     </div>

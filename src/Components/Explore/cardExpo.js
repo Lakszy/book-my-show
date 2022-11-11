@@ -27,7 +27,7 @@ function CardExpo(props) {
 
     return (
         <>
-            <div className="py-10">
+            <div className="py-4">
                 <div className="flex md:flex-row md:gap-0 flex-col gap-10 w-full m-auto justify-center px-5">
                     <Filter filter={filter} className="md:flex w-full block justify-center" />
                     <CardSlide lang={filter[0].array} cardDetails={props.cardDetails} title={props.title}/>
